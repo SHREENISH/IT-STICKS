@@ -27,12 +27,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  border: 4px solid #1f2937 ;
   
 }
 
 .login-btn{
  
-  background-color: #f472b6;
+  background-color: #facc15;
   color: #1f2937;
   padding: 8px 17px;
   font-size: 1rem;
@@ -62,10 +64,11 @@ body {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 70px;         
+  flex-wrap: wrap;
+  gap: 5rem;         
   margin: 0;
   padding: 0px;
-  font-size: 1.4rem;
+  font-size: clamp(1rem, 2vw, 1.4rem);
 }
 
 .nav-links li a {
@@ -127,6 +130,7 @@ body {
   width: 100%;
   max-width: 1000px;
   height: auto;
+  border: 4px solid #1f2937;
   
  
 
@@ -176,6 +180,88 @@ body {
   
 }
 
+.scroll-wrapper {
+  position: relative;
+  margin: 100px 0;
+  padding: 0 40px;
+}
 
+.category-scroll {
+  display: flex;
+  overflow-x: auto;
+  width: 100%;
+  max-width: 100vw;
+  gap: 50px;
+  
+  position: relative;
+  padding: 20px 0;
+
+  scroll-snap-type: x mandatory;
+  
+  scroll-behavior: smooth;
+
+ 
+ 
+}
+.category-card {
+  flex: 0 0 auto;
+  width: 350px;
+  border-radius: 15px;
+  background-color: transparent;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s;
+  border: 4px solid #1f2937;
+  scroll-snap-align: center;
+
+} 
+.category-card:hover {
+  transform: scale(1.01);
+}
+
+.category-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: contain;
+
+}
+
+.category-name {
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #38bdf8;
+  color: white;
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: #38bdf8;
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-btn:hover {
+  background-color: #0ea5e9;
+}
+
+.scroll-btn.left {
+  left: -10px;
+}
+
+.scroll-btn.right {
+  right: -10px;
+}
 
 

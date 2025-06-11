@@ -43,14 +43,56 @@
   </section>
 
   <section class="cat-bar"> 
-    <dev class="cat-text">
+    <div class="cat-text">
       <h1>Crafted with love</h1>
       <p>EXPLORE MORE CATAGORIES</p>
-    </dev>
+    </div>
+  </section>
 
-  </section> 
+  <div class="scroll-wrapper">
   
-    
+    <button class="scroll-btn left" onclick="scrollLeft()">&#8592</button>
+    <div class="category-scroll" id="category-scroll">
+      <div class="category-card">
+        <img src="/home/shreenish/Documents/GitHub/IT-STICKS/images/png-clipart-one-piece-ilustration-portgas-d-ace-monkey-d-luffy-one-piece-treasure-cruise-one-piece-pirate-warriors-edward-newgate-one-piece-orange-computer-wallpaper-thumbnail-removebg-preview.png">
+        <div class="category-name">Anime</div>
+      </div>
+      <div class="category-card">
+        <img src="/home/shreenish/Documents/GitHub/IT-STICKS/images/hd-valorant-game-omen-character-player-png-733961695115637mjmuwerdpd-removebg-preview.png" >
+        <div class="category-name">Games</div>
+      </div>
+      <div class="category-card">
+        <img src="/home/shreenish/Documents/GitHub/IT-STICKS/images/51KLX43Rg5L._AC_UF1000_1000_QL80_-removebg-preview.png">
+        <div class="category-name">Games</div>
+      </div>
+      <div class="category-card">
+        <img src="/home/shreenish/Documents/GitHub/IT-STICKS/images/51KLX43Rg5L._AC_UF1000_1000_QL80_-removebg-preview.png">
+        <div class="category-name">Games</div>
+      </div>
+      <div class="category-card">
+        <img src="/home/shreenish/Documents/GitHub/IT-STICKS/images/51KLX43Rg5L._AC_UF1000_1000_QL80_-removebg-preview.png">
+        <div class="category-name">Games</div>
+      </div>
+    </div>
+
+    <button class="scroll-btn right" onclick="scrollRight()">&#8594</button>
+  </div>
+  
+  <script>
+    function scrollLeft() {
+      document.getElementById('categoryScroll').scrollBy({
+        left: -250,
+        behavior: 'smooth'
+      });
+    }
+
+    function scrollRight() {
+      document.getElementById('categoryScroll').scrollBy({
+        left: 250,
+        behavior: 'smooth'
+      });
+    }
+  </script>
 
 
 
