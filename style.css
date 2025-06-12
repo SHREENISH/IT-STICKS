@@ -13,6 +13,9 @@ body {
 }
 
 .topbar {
+  position: sticky;
+  top: 10px;
+  z-index: 9999;
   background-color: #38bdf8;
   color: white;
   padding: 30px;
@@ -207,17 +210,17 @@ body {
   z-index: 10;
   background-color: #38bdf8;
   color: white;
-  border: none;
+  border: 4px solid #1f2937;
   font-size: 24px;
-  padding: 10px 15px;
-  border-radius: 50%;
+  padding: 25px 15px;
+  border-radius: 15px;
   cursor: pointer;
   transition: 0.3s;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .scroll-btn:hover {
-  background-color: #0ea5e9;
+  background-color: #f472b6;
 }
 
 .scroll-btn.left {
@@ -226,4 +229,42 @@ body {
 
 .scroll-btn.right {
   right: 10px;
+}
+
+.popular-text h1 {
+  text-align: center;
+  font-size: 50px;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 60px 30px;
+  background-color: #f9fafb;
+  flex-wrap: wrap;
+}
+
+.feature {
+  display: flex;
+  text-align: center;
+  max-width: 300px;
+  margin: 20px;
+  text-align: left;
+}
+
+.feature img {
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.feature-text h3 {
+  font-size: 22px;
+  color: #1f2937;
+  margin-bottom: 5px;
+}
+
+.feature-text p3 {
+  color: #fbbf24; /* Yellow text */
+  font-weight: 500;
 }
