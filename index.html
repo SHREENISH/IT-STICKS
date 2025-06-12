@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>IT STICKS</title>
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -15,86 +15,76 @@
       <li><a href="#">Upload</a></li>
       <li><a href="#">Pricing</a></li>
       <li><a href="#">Contact</a></li>
-
     </ul>
-    
     <button class="login-btn">Login/Signup</button>
-    
   </nav>
+
   <section class="hero">
     <div class="intro-text">
-      <h1>UPLOAD IT. PRINT IT.<br> 
-        STICK IT!
-      </h1>
-      <p1>Upload your favorite photos, designs, or art and we’ll turn<br> 
-        them into high-quality, custom stickers delivered right to<br> 
-        your door in Nepal. Fast, fun, and uniquely you.
-      </p1><br>
-      <p2>We ship all over Nepal
-
-      </p2>
+      <h1>UPLOAD IT. PRINT IT.<br>STICK IT!</h1>
+      <p class="para1">Upload your favorite photos, designs, or art and we’ll turn<br>
+        them into high-quality, custom stickers delivered right to<br>
+        your door in Nepal. Fast, fun, and uniquely you.</p>
+      <p class="para2">We ship all over Nepal</p>
     </div>
+
     <div class="main-pic">
-      <img src="/home/shreenish/Documents/GitHub/IT-STICKS/pexels-photo-2783837.jpeg" width="820" height="700">
+      <img src="/home/shreenish/Documents/GitHub/IT-STICKS/pexels-photo-2783837.jpeg" width="820" height="700" alt="main image">
       <button class="cta-buttion">Get Yours Now</button>
     </div>
-
-
   </section>
 
   <section class="cat-bar"> 
     <div class="cat-text">
       <h1>Crafted with love</h1>
-      <p>EXPLORE MORE CATAGORIES</p>
+      <p>EXPLORE MORE CATEGORIES</p>
     </div>
   </section>
 
   <div class="scroll-wrapper">
-  
-    <button class="scroll-btn left" onclick="scrollLeft()">&#8592</button>
+    <button class="scroll-btn left" onclick="scrollLeft()">&#8592;</button>
+
     <div class="category-scroll" id="category-scroll">
       <div class="category-card">
-        <img src="/home/shreenish/Documents/GitHub/IT-STICKS/images/png-clipart-one-piece-ilustration-portgas-d-ace-monkey-d-luffy-one-piece-treasure-cruise-one-piece-pirate-warriors-edward-newgate-one-piece-orange-computer-wallpaper-thumbnail-removebg-preview.png">
+        <img src="/home/shreenish/Documents/GitHub/IT-STICKS/images/png-clipart-one-piece-ilustration-portgas-d-ace-monkey-d-luffy-one-piece-treasure-cruise-one-piece-pirate-warriors-edward-newgate-one-piece-orange-computer-wallpaper-thumbnail-removebg-preview.png" alt="Anime" />
         <div class="category-name">Anime</div>
       </div>
       <div class="category-card">
-        <img src="/home/shreenish/Documents/GitHub/IT-STICKS/images/hd-valorant-game-omen-character-player-png-733961695115637mjmuwerdpd-removebg-preview.png" >
+        <img src="/home/shreenish/Documents/GitHub/IT-STICKS/images/hd-valorant-game-omen-character-player-png-733961695115637mjmuwerdpd-removebg-preview.png" alt="Games" />
         <div class="category-name">Games</div>
       </div>
       <div class="category-card">
-        <img src="/home/shreenish/Documents/GitHub/IT-STICKS/images/51KLX43Rg5L._AC_UF1000_1000_QL80_-removebg-preview.png">
+        <img src="/home/shreenish/Documents/GitHub/IT-STICKS/images/51KLX43Rg5L._AC_UF1000_1000_QL80_-removebg-preview.png" alt="Tech" />
+        <div class="category-name">Tech</div>
+      </div>
+      <div class="category-card">
+        <img src="images/game4.png" alt="Games" />
         <div class="category-name">Games</div>
       </div>
       <div class="category-card">
-        <img src="/home/shreenish/Documents/GitHub/IT-STICKS/images/51KLX43Rg5L._AC_UF1000_1000_QL80_-removebg-preview.png">
-        <div class="category-name">Games</div>
-      </div>
-      <div class="category-card">
-        <img src="/home/shreenish/Documents/GitHub/IT-STICKS/images/51KLX43Rg5L._AC_UF1000_1000_QL80_-removebg-preview.png">
+        <img src="images/game5.png" alt="Games" />
         <div class="category-name">Games</div>
       </div>
     </div>
 
-    <button class="scroll-btn right" onclick="scrollRight()">&#8594</button>
+    <button class="scroll-btn right" onclick="scrollRight()">&#8594;</button>
   </div>
-  
-  <script>
-    function scrollLeft() {
-      document.getElementById('categoryScroll').scrollBy({
-        left: -250,
-        behavior: 'smooth'
-      });
-    }
 
-    function scrollRight() {
-      document.getElementById('categoryScroll').scrollBy({
-        left: 250,
-        behavior: 'smooth'
-      });
-    }
-  </script>
+<script>
+  function scrollLeft() {
+    document.getElementById('category-scroll').scrollBy({
+      left: -250,
+      behavior: 'smooth'
+    });
+  }
 
-
+  function scrollRight() {
+    document.getElementById('category-scroll').scrollBy({
+      left: 250,
+      behavior: 'smooth'
+    });
+  }
+</script>
 
 
 </body>
