@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload - IT STICKS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+<nav class="topbar-upload">
+    <div class="logo">IT STICKS</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Pricing</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="upload-intro-txt">
+    <h1>UPLOAD YOUR PICTURES HERE</h1>
+    <p>upload your pictures in file format jpeg, png, SVG</p>
+</div>
+
+<div class="upload-wrapper">
+    <div class="upload-card">
+        <h2>Local File</h2>
+        <div class="upload-drop" id="dropArea">
+            <p>Choose file...<br>OR<br>Drag n Drop</p>
+        </div>
+
+        <img src="/home/shreenish/Documents/GitHub/IT-STICKS/images/ChatGPT_Image_Jun_13__2025__07_20_29_PM-removebg-preview.png" alt="import-icon" width="70px">
+        <br>
+        <button class="upload-btn" onclick="triggerFile()">Import</button>
+        <input type="file" id="fileInput">
+
+
+       
+
+</div>
+
+    <div class="upload-card-url">
+        <h2>URL/Direct Link</h2>
+
+        <input type="text" id="urlInput" placeholder="https://..." class="url-input">
+        <br>
+
+
+        <img src="/home/shreenish/Documents/GitHub/IT-STICKS/images/ChatGPT_Image_Jun_13__2025__07_20_29_PM-removebg-preview.png" alt="import-icon" width="70px">
+        <br>
+        <button class="upload-btn" onclick="importFromURL()">Import</button>
+        <br>
+        <img src="" id="urlPreview" style="display:none; max-width:300px; margin-top: 10px;">
+
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>
