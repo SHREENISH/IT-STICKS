@@ -41,15 +41,18 @@
     <div class="upload-card-url">
         <h2>URL/Direct Link</h2>
 
-        <input type="text" id="urlInput" placeholder="https://..." class="url-input">
+        <label for="urlInput">Enter one or more URL's</label>
+        <textarea id="urlInput" placeholder="https://example.com/image1.jpg&#10;https://example.com/image2.png" rows="5" class="url-input"></textarea>
+        
+        <br>
+        <div id="urlPreviewContainer" style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;"></div>
         <br>
 
 
-        <img src="/home/shreenish/Documents/GitHub/IT-STICKS/images/ChatGPT_Image_Jun_13__2025__07_20_29_PM-removebg-preview.png" alt="import-icon" width="70px">
+        <img src ="/home/shreenish/Documents/GitHub/IT-STICKS/images/ChatGPT_Image_Jun_14__2025__10_15_59_PM-removebg-preview.png" alt="import-icon-url" width="70px">
         <br>
-        <button class="upload-btn" onclick="importFromURL()">Import</button>
-        <br>
-        <img src="" id="urlPreview" style="display:none; max-width:300px; margin-top: 10px;">
+        <button class="upload-btn-url" onclick="importFromURL()">Import</button>
+        
 
     </div>
 </div>

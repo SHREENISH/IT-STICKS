@@ -314,10 +314,16 @@ body {
 
 .upload-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   gap: 40px;
   margin-top: 40px;
   flex-wrap: wrap;
+}
+
+.upload-card-url h2 {
+   font-size: 20px;
+  margin-bottom: 20px;
+
 }
 
 
@@ -337,7 +343,31 @@ body {
   border:2px dashed #f472b6;
   border-radius: 12px;
   outline: none;
+  margin-bottom: 110px;
 }
+
+.import-icon-url {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 100px;
+}
+
+.upload-btn-url {
+  background: #fbbf24;
+  color: white;
+  padding: 10px 20px;
+  border: 2px solid #1f2937;
+  border-radius: 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.upload-btn-url:hover {
+  background: #f472b6;
+
+}
+
 
 .urlPreview n{
   border-radius: 0px;

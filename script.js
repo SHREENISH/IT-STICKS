@@ -42,22 +42,22 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function importFromURL() {
-  const urlInput = document.getElementById("urlInput"); // Use same ID as your input field
-  const preview = document.getElementById("urlPreview");
-  const url = urlInput.value.trim();
+    const input = document.getElementById("urlInput").value;
+    const urls = input.split("\n").map(u => u.trim()).filter(u => u !== "");
 
-  if (!url || !url.startsWith("http")) {
-    alert("Please enter a valid image URL!");
-    return;
-  }
+    const previewContainer = document.getElementById("urlPreviewContainer");
+    previewContainer.innerHTML = ""; // Clear previous images
 
-  preview.src = url;
-  preview.style.display = "block";
-
-  preview.onerror = () => {
-    alert("Failed to load image. Please check the URL.");
-    preview.style.display = "none";
-  };
+    urls.forEach(url => {
+        const img = document.createElement("img");
+        img.src = url;
+        img.alt = "Preview";
+        img.style.maxWidth = "150px";
+        img.style.border = "1px solid #ccc";
+        img.style.borderRadius = "8px";
+        previewContainer.appendChild(img);
+    });
 }
+
 
 
