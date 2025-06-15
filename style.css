@@ -343,7 +343,8 @@ body {
   border:2px dashed #f472b6;
   border-radius: 12px;
   outline: none;
-  margin-bottom: 110px;
+  margin-bottom: 20px;
+  resize: none;
 }
 
 .import-icon-url {
@@ -430,8 +431,55 @@ body {
 
 }
 
-input[type="file"] {
-  display: none;
+.preview-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  border: 2px dashed #f472b6;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.preview-item img {
+  max-width: 150px;
+  border-radius: 8px;
+  border: 2px solid #1f2937;
+}
+
+.preview-item input[type="number"] {
+  width: 50px;
+  text-align: center;
+  font-weight: 600;
+  padding: 5px;
+  border-radius: 8px;
+  border: 2px solid #1f2937;
+}
+
+.preview-item button {
+  background-color: #fbbf24;
+  color: #1f2937;
+  border: 2px solid #1f2937;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 5px;
+}
+
+.preview-item button:hover {
+  background-color: #f472b6;
+  color: white;
+}
+
+.preview-item div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
