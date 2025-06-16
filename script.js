@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     fileInput.dispatchEvent(event);
 
 
-    previewLocalFiles(files);
+    
   });
 
   fileInput.addEventListener("change", () => {
