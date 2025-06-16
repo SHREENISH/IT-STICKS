@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, request, session, url_for
+from flask import Flask, render_template, redirect, request, session, url_for, flash, get_flashed_messages
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -27,17 +27,19 @@ def dashboard():
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
-        username = request.form['username']
+        username = request.form['username'].strip()
         password = generate_password_hash(request.form['password'])
 
         if User.query.filter_by(username=username).first():
-            return 'Username already exists'
+            flash('Username already exists')
+            return redirect(url_for('register'))
 
         new_user = User(username=username, password=password)
         db.session.add(new_user)
         db.session.commit()
-        return redirect(url_for('/login'))
-    
+        flash('Account created! Please login')
+        return redirect(url_for('login'))
+
     return render_template('register.html')
 
 
@@ -45,7 +47,7 @@ def register():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        username = request.form['username']
+        username = request.form['username'].strip()
         password = request.form['password']
 
         user = User.query.filter_by(username=username,).first()
@@ -53,9 +55,10 @@ def login():
         if user and check_password_hash(user.password, password):
             session['user_id'] = user.id
             session['username'] = user.username
-            return redirect('/')
+            return redirect(url_for('dashboard'))
         else:
-            return 'Invalid credebntials'
+            flash('Invalid credentails')
+            return redirect(url_for('login'))
 
     return render_template('login.html')
 
@@ -64,7 +67,8 @@ def login():
 @app.route('/logout')
 def logout():
     session.clear()
-    return redirect('/login')
+    flash('You have been logged out.')
+    return redirect(url_for('login'))
 
 if __name__ == '__main__':
     with app.app_context():

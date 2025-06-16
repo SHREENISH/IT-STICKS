@@ -1,0 +1,94 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    background-color: #38bdf8;
+    
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+}
+
+.register_container {
+    background: #f9fafb;
+    padding: 40px 30px;
+    border-radius: 15px;
+    border: 4px solid #1f2937;
+    box-shadow: 0 4px 12px rgba(0 0 0 / 0.1);
+   
+    width: 450px;
+    height: 450px;
+  
+ 
+  
+
+}
+
+.register_container h2 {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 550;
+    font-size: 55px;
+    text-align: center;
+}
+
+.register_container form {
+    display: flex;
+    flex-direction: column;
+}
+.register_container input[type="text"],
+.register_container input[type="password"] {
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 2px dashed #f472b6;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+
+}
+
+
+
+.register_container input[type="text"]:focus,
+.register_container input[type="password"]:focus {
+    outline: none;
+    background-color: #facc15;
+}
+
+
+.register_container button {
+    background-color: #facc15;
+    color: #1f2937;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #1f2937;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: backgrond-color 0.3s ease;
+}   
+
+.register_container button:hover {
+    background-color: #facc15;
+    box-shadow: 0 4px 4px rgba(0 0 0 / 0.1);
+
+}
+
+.register_container p {
+    margin-top: 18px;
+    font-size: 14px;
+    text-align: center;
+    color: #1f2937;
+}
+
+.register_container p a {
+    color: #f472b6;
+    text-decoration: none;
+}
+.register_container p a:hover {
+    text-decoration: underline;
+}
+
+
+
