@@ -3,17 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>DASHBOARD -IT STICKS</title>
-    <link rel="stylesheet" href="/static/template.css">
+    <link rel="stylesheet" href="/static/dashboard.css">
 </head>
 <body>
 
+    <div class="container">
+        <div class="sidebar">
+            <h2>IT STICKS</h2>
+
+            <ul>
+                <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+                <li><a href="#">Orders</a></li>
+                <li><a href="#">Cart</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            </ul>    
+        </div>
 
 
-    
-
-    <h2>Welcome, {{username}}</h2>
-    <p>This is a dashboard</p>
-    <a href="/logout">Logout</a>
+        <div class="main">
+            <h2>Welcome, {{ username }}</h2>
+            <div class="placeholder-box"></div>
+            <div class="profile-circle"></div>
+        </div>
+    </div>   
 
 </body>
 
