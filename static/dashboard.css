@@ -15,18 +15,18 @@ body {
 
 .sidebar {
     width: 200px;
-    padding: 20px;
+    padding: 30px;
     background-color: #34c1ff;
     display: flex;
     flex-direction: column;
-    position: relative;
+    
  
 
 }
 
 .sidebar h2 {
     font-weight: bold;
-    margin-bottom: 110px;
+    margin-bottom: 90px;
     color: white;
     margin-left: 30px;
     font-size: 35px;
@@ -46,7 +46,21 @@ body {
     margin-bottom: 30px;
     margin-left: 100px;
     font-size: 20px;
+    padding: 20px 40px;
+    border-radius: 15px 0  0 15px;
+    text-align: left;
+    width: 100px;
+    transition: all 0.3s ease;
+    cursor: pointer;
    
+}
+
+.sidebar ul li:hover{
+    background-color: #f472b6;
+    border: 3px solid #1f2937;
+    border-radius: 15px 0 0 15px;
+    color: #1f2937;
+
 }
 
 .sidebar ul li a {
@@ -54,7 +68,12 @@ body {
     text-decoration: none;
     font-weight: 500;
     
+    
+    
+    
 }
+
+
 
 .main {
     flex: 1;
