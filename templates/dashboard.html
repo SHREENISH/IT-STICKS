@@ -15,6 +15,11 @@
     <p>This is a dashboard</p>
     <a href="/logout">Logout</a>
 
+
+
+    <img src="{{ url_for('static', filename='profile_pics/' + (user.profile_pic or 'default.png')) }}" alt="Profile Picture" width="100" height="100" style="border-radius: 50%;">
+
+
 </body>
 
 </html>

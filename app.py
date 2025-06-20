@@ -1,12 +1,23 @@
 from flask import Flask, render_template, redirect, request, session, url_for, flash, get_flashed_messages
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
+from werkzeug.utils import secure_filename
+import os
+
+
+UPLOAD_FOLDER = 'static/profile_pics'
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 
 
 app = Flask(__name__)
 app.secret_key = '5HR33N15H#1s'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 db = SQLAlchemy(app)
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 #user model
 class User(db.Model):
@@ -61,6 +72,25 @@ def login():
             return redirect(url_for('login'))
 
     return render_template('login.html')
+
+
+
+
+
+#profile pics route
+@app.route('/upload_profile_pic', method=['GET', 'POST'])
+def upload_profile_pic():
+    if request.method == 'POST':
+        file = request.files['profile_pic']
+        if file and allowed_file(file.filename):
+            filename = secure_filename(file.filename)
+            save_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+            file.save(save_path)
+
+
+            return redirect(url_for('dashboard'))
+    
+    return render_template('profile.html')
 
 
 #logout route
