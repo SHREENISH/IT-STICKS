@@ -92,3 +92,8 @@ body {
     margin-left: 20px;
     flex: 1;
 }
+.main img {
+    border: 5px solid #1f2937;
+    margin-left: 50px;
+
+}
